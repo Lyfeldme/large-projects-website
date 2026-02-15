@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
+    <link rel="stylesheet" href="./styles/theme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <title>Строительная компания "Проект" | Реализация крупнейших объектов</title>
+    <meta name="description" content="Строительная компания с 26-летним опытом. Реализуем крупнейшие проекты: стадионы, газопроводы, мосты, дамбы по всей России">
+    <!-- SVG sprite with icons -->
+    <svg style="display: none;">
+      <symbol id="icon-logo" viewBox="0 0 60 60">
+        <path fill="#f7654a" d="M54.045 5.955C50.182 2.125 45.097 0 39.657 0S29.13 2.124 25.268 5.955a20.28 20.28 0 0 0-5.665 10.88c-.064.418-.129.837-.161 1.255l-.096 1.256c-.033.321-.033.675-.033.997V40.72h17.608c.032-.354.032-.676.032-1.03v-2.736H23.079V20.376c0-.355 0-.676.033-1.03.032-.419.064-.837.128-1.256.065-.418.13-.837.226-1.255.676-3.155 2.285-5.987 4.474-8.208a16.55 16.55 0 0 1 11.717-4.86c9.141 0 16.577 7.435 16.577 16.576 0 4.571-1.867 8.724-4.86 11.717a16.5 16.5 0 0 1-8.209 4.474v3.863a20.3 20.3 0 0 0 10.88-5.665A20.23 20.23 0 0 0 60 20.343c0-5.44-2.124-10.558-5.955-14.388"/>
+        <path fill="#f7654a" d="M23.08 23.08h13.873v16.609c0 .354 0 .676-.032 1.03-.033.418-.065.837-.13 1.255-.063.419-.128.837-.224 1.256-.676 3.154-2.286 5.987-4.475 8.208a16.55 16.55 0 0 1-11.716 4.86c-9.142 0-16.578-7.435-16.578-16.577 0-4.57 1.867-8.723 4.86-11.717a16.5 16.5 0 0 1 8.209-4.474v-3.862a20.28 20.28 0 0 0-10.88 5.665C2.124 29.099 0 34.217 0 39.657s2.124 10.525 5.955 14.388A20.23 20.23 0 0 0 20.343 60c5.44 0 10.526-2.124 14.389-5.955 3.605-3.605 5.697-8.337 5.922-13.39 0-.161 0-.322.033-.483V19.313H23.079c-.032.354-.032.676-.032 1.03z"/>
+      </symbol>
+      <symbol id="icon-email" viewBox="0 0 18 15">
+        <path fill="#000" d="M18 4.56a6 6 0 0 1-1.005.874c-1.677 1.135-3.364 2.28-5.002 3.466-.843.622-1.888 1.386-2.983 1.386h-.02c-1.095 0-2.14-.764-2.983-1.386-1.638-1.196-3.325-2.33-4.992-3.466A5.6 5.6 0 0 1 0 4.56v7.976c0 .884.723 1.607 1.607 1.607h14.786c.884 0 1.607-.723 1.607-1.607zm0-2.953C18 .723 17.267 0 16.393 0H1.607C.532 0 0 .844 0 1.828c0 .914 1.015 2.05 1.728 2.531 1.557 1.085 3.134 2.17 4.69 3.265C7.072 8.076 8.177 9 8.99 9h.02c.814 0 1.919-.924 2.572-1.376 1.556-1.095 3.133-2.18 4.7-3.265C17.166 3.747 18 2.732 18 1.607"/>
+      </symbol>
+      <symbol id="icon-building" viewBox="0 0 60 48">
+        <path d="M22.875 36h-3.75c-.656 0-1.125.563-1.125 1.125v3.75c0 .656.469 1.125 1.125 1.125h3.75c.563 0 1.125-.469 1.125-1.125v-3.75c0-.562-.562-1.125-1.125-1.125m0-18h-3.75c-.656 0-1.125.563-1.125 1.125v3.75c0 .656.469 1.125 1.125 1.125h3.75c.563 0 1.125-.469 1.125-1.125v-3.75c0-.562-.562-1.125-1.125-1.125m-9 0h-3.75C9.469 18 9 18.563 9 19.125v3.75C9 23.531 9.469 24 10.125 24h3.75c.563 0 1.125-.469 1.125-1.125v-3.75c0-.562-.562-1.125-1.125-1.125m0 18h-3.75C9.469 36 9 36.563 9 37.125v3.75C9 41.531 9.469 42 10.125 42h3.75c.563 0 1.125-.469 1.125-1.125v-3.75c0-.562-.562-1.125-1.125-1.125m0-9h-3.75C9.469 27 9 27.563 9 28.125v3.75C9 32.531 9.469 33 10.125 33h3.75c.563 0 1.125-.469 1.125-1.125v-3.75c0-.562-.562-1.125-1.125-1.125m9 0h-3.75c-.656 0-1.125.563-1.125 1.125v3.75c0 .656.469 1.125 1.125 1.125h3.75c.563 0 1.125-.469 1.125-1.125v-3.75c0-.562-.562-1.125-1.125-1.125m27 9h-3.75c-.656 0-1.125.563-1.125 1.125v3.75c0 .656.469 1.125 1.125 1.125h3.75c.563 0 1.125-.469 1.125-1.125v-3.75c0-.562-.562-1.125-1.125-1.125m0-9h-3.75c-.656 0-1.125.563-1.125 1.125v3.75c0 .656.469 1.125 1.125 1.125h3.75c.563 0 1.125-.469 1.125-1.125v-3.75c0-.562-.562-1.125-1.125-1.125m7.875-9H48V2.25C48 1.031 46.969 0 45.75 0h-19.5C24.938 0 24 1.031 24 2.25V9h-3V1.5c0-.75-.75-1.5-1.5-1.5H18c-.844 0-1.5.75-1.5 1.5V9h-6V1.5C10.5.75 9.75 0 9 0H7.5C6.656 0 6 .75 6 1.5V9H2.25C.938 9 0 10.031 0 11.25V46.5c0 .844.656 1.5 1.5 1.5H3c.75 0 1.5-.656 1.5-1.5v-33h24v-9h15v18h12v24c0 .844.656 1.5 1.5 1.5h1.5c.75 0 1.5-.656 1.5-1.5V20.25c0-1.219-1.031-2.25-2.25-2.25M37.875 9h-3.75C33.469 9 33 9.563 33 10.125v3.75c0 .656.469 1.125 1.125 1.125h3.75c.563 0 1.125-.469 1.125-1.125v-3.75C39 9.563 38.438 9 37.875 9m0 18h-3.75c-.656 0-1.125.563-1.125 1.125v3.75c0 .656.469 1.125 1.125 1.125h3.75c.563 0 1.125-.469 1.125-1.125v-3.75c0-.562-.562-1.125-1.125-1.125m0-9h-3.75c-.656 0-1.125.563-1.125 1.125v3.75c0 .656.469 1.125 1.125 1.125h3.75c.563 0 1.125-.469 1.125-1.125v-3.75c0-.562-.562-1.125-1.125-1.125" fill="#F7654A"/>
+      </symbol>
+      <symbol id="icon-quote" viewBox="0 0 34 28">
+        <path fill="#f7654a" d="M0 27.264q0-4.512.192-10.656Q.48 7.872 2.976 3.936T11.808 0l1.152 4.896Q9.504 4.992 8.256 7.2q-1.152 2.112-1.152 6.336h6.72v13.728zm19.68 0q0-4.512.192-10.656.288-8.736 2.784-12.672T31.488 0l1.152 4.896q-3.456.096-4.704 2.304-1.152 2.112-1.152 6.336h6.72v13.728z"/>
+      </symbol>
+      <symbol id="icon-arrow" viewBox="0 0 13 12">
+        <path d="M0 0L12.9904 6.49518L0 12.9904L0 0Z" fill="#F7654A"/>
+      </symbol>
+      <symbol id="icon-location" viewBox="0 0 36 49">
+        <path fill="#f7654a" d="M18 0C7.969 0 0 8.156 0 18c0 6.75 2.156 8.813 14.156 27.938a4.472 4.472 0 0 0 7.594 0C33.75 26.812 36 24.75 36 18c0-9.937-8.156-18-18-18m0 43.5C6 24.375 4.5 23.156 4.5 18c0-7.406 6-13.5 13.5-13.5 7.406 0 13.5 6.094 13.5 13.5 0 5.156-1.5 6.188-13.5 25.5M10.5 18c0 4.219 3.281 7.5 7.5 7.5 4.125 0 7.5-3.281 7.5-7.5 0-4.125-3.375-7.5-7.5-7.5-4.219 0-7.5 3.375-7.5 7.5"/>
+      </symbol>
+      <symbol id="icon-phone" viewBox="0 0 49 49">
+        <path fill="#f7654a" d="M45 2.438 36.188.468c-2.063-.468-4.126.563-4.876 2.438l-4.125 9.563c-.75 1.687-.28 3.75 1.22 4.969l3.75 3.093c-2.626 4.875-6.75 8.907-11.626 11.625l-3.093-3.75c-1.22-1.5-3.282-1.968-4.97-1.218l-9.562 4.03C1.031 32.064 0 34.126.47 36.189L2.438 45c.468 1.969 2.25 3.281 4.218 3.281 22.969 0 41.719-18.562 41.719-41.625 0-1.968-1.406-3.75-3.375-4.218M6.844 43.78l-1.969-8.437 9.188-3.938 5.25 6.375c9.28-4.406 14.062-9.187 18.468-18.468l-6.375-5.25 3.938-9.188 8.531 1.969C43.781 27.188 27.188 43.688 6.844 43.78"/>
+      </symbol>
+      <symbol id="icon-time" viewBox="0 0 47 47">
+        <path fill="#f7654a" d="M23.25 0C10.406 0 0 10.406 0 23.25S10.406 46.5 23.25 46.5 46.5 36.094 46.5 23.25 36.094 0 23.25 0m0 42A18.685 18.685 0 0 1 4.5 23.25C4.5 12.938 12.844 4.5 23.25 4.5 33.563 4.5 42 12.938 42 23.25 42 33.656 33.563 42 23.25 42m5.719-9.75c.562.375 1.218.281 1.593-.281l1.782-2.344c.375-.562.281-1.219-.282-1.594l-6.187-4.593V10.125c0-.562-.562-1.125-1.125-1.125h-3c-.656 0-1.125.563-1.125 1.125v15.469c0 .281.094.656.375.843z"/>
+      </symbol>
+      <symbol id="icon-envelope" viewBox="0 0 48 36">
+        <path fill="#f7654a" d="M43.5 0h-39C1.969 0 0 2.063 0 4.5v27C0 34.031 1.969 36 4.5 36h39c2.438 0 4.5-1.969 4.5-4.5v-27C48 2.063 45.938 0 43.5 0m0 4.5v3.844c-2.156 1.781-5.531 4.406-12.656 10.031C29.25 19.594 26.156 22.594 24 22.5c-2.25.094-5.344-2.906-6.937-4.125C9.938 12.75 6.563 10.125 4.5 8.344V4.5zm-39 27V14.156c2.063 1.688 5.156 4.125 9.75 7.781C16.313 23.532 19.969 27.095 24 27c3.938.094 7.5-3.469 9.656-5.062a1543 1543 0 0 1 9.844-7.782V31.5z"/>
+      </symbol>
+    </svg>
+  </head>
+  <body>
+    <input type="checkbox" id="theme-toggle" />
+    <!-- Skip to main content (accessibility) -->
+    <a href="#main-content" class="skip-to-main visually-hidden">Перейти к основному содержанию</a>
+    <!-- Header -->
+    <header class="header">
+      <!-- Navigation -->
+      <nav class="header__nav" aria-label="Основная навигация">
+        <div class="header__nav-container">
+          <a href="/" class="header__logo-link">
+            <svg width="60" height="60" fill="none" class="header__logo" aria-label="Логотип строительной компании">
+              <use xlink:href="#icon-logo"></use>
+            </svg>
+          </a>
+          <!-- Checkbox for menu management -->
+          <input type="checkbox" id="menu-toggle" class="header__menu-checkbox">
+          <!-- The burger button -->
+          <label for="menu-toggle" class="header__menu-toggle" aria-label="Открыть меню">
+          <span class="header__menu-line"></span>
+          <span class="header__menu-line"></span>
+          <span class="header__menu-line"></span>
+          </label>
+          <!-- Exit menu -->
+          <div class="header__mobile-menu">
+            <ul class="header__mobile-menu-list">
+              <!-- Menu items -->
+              <li class="header__mobile-menu-item"><a href="#about" class="header__mobile-menu-link">О компании</a></li>
+              <li class="header__mobile-menu-item"><a href="#projects" class="header__mobile-menu-link">Проекты</a></li>
+              <li class="header__mobile-menu-item"><a href="#services" class="header__mobile-menu-link">Услуги</a></li>
+              <li class="header__mobile-menu-item"><a href="#partners" class="header__mobile-menu-link">Партнеры</a></li>
+              <li class="header__mobile-menu-item"><a href="#contacts" class="header__mobile-menu-link">Контакты</a></li>
+              <!-- Switch -->
+              <li class="header__mobile-menu-item theme-switch-item">
+                <label for="theme-toggle" class="header__mobile-menu-link theme-switch-label">
+                  <div class="theme-switch-text">
+                    <span class="theme-switch-light">Светлая</span>
+                    <span class="theme-switch-dark">Тёмная</span>
+                  </div>
+                  <span class="theme-switch-toggle">
+                  <span class="theme-switch-slider"></span>
+                  </span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Header content -->
+      <div class="header__content">
+        <div class="header__content-container">
+          <h1 class="header__title">РЕАЛИЗУЕМ КРУПНЕЙШИЕ ПРОЕКТЫ В РОССИИ</h1>
+          <p class="header__description">стадионы, газопроводы, мосты, дамбы</p>
+        </div>
+      </div>
+    </header>
+    <!-- Main content -->
+    <main id="main-content">
+      <!-- Advantages section -->
+      <section class="advantages" aria-label="Наши преимущества">
+        <div class="advantages__container container">
+          <ul class="advantages__list">
+            <li class="advantages__item">
+              <div class="advantages__value">26</div>
+              <p class="advantages__label">лет</p>
+              <p class="advantages__description">на рынке</p>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__value">26</div>
+              <p class="advantages__label">лет</p>
+              <p class="advantages__description">на рынке</p>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__value">26</div>
+              <p class="advantages__label">лет</p>
+              <p class="advantages__description">на рынке</p>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__value">26</div>
+              <p class="advantages__label">лет</p>
+              <p class="advantages__description">на рынке</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Projects section -->
+      <section class="projects">
+        <div class="projects__container container">
+          <header class="projects__header">
+            <h2 class="projects__main-title">НАШИ САМЫЕ БОЛЬШИЕ ПРОЕКТЫ</h2>
+          </header>
+          <div class="projects__list">
+            <article class="projects__item">
+              <div class="projects__image-wrapper">
+                <img 
+                  src="./images/projects-img.png" 
+                  alt="Внешний вид Газпром Арены - современный стадион с уникальной архитектурой" 
+                  class="projects__image"
+                  loading="lazy"
+                  >
+                <div class="projects__decorative"></div>
+              </div>
+              <h3 class="projects__title">Газпром Арена</h3>
+              <p class="projects__text">
+                Мы сделали самую красивую арену в Европе. Это открытие стало для нас прорывной точкой для разивтия на следующие десятилетия. Мы очень рады данному еву.
+              </p>
+            </article>
+            <article class="projects__item">
+              <div class="projects__image-wrapper">
+                <img 
+                  src="./images/projects-img.png" 
+                  alt="Стадион Лужники - крупнейший спортивный комплекс России" 
+                  class="projects__image"
+                  loading="lazy"
+                  >
+                <div class="projects__decorative"></div>
+              </div>
+              <h3 class="projects__title">Газпром Арена</h3>
+              <p class="projects__text">
+                Мы сделали самую красивую арену в Европе. Это открытие стало для нас прорывной точкой для разивтия на следующие десятилетия. Мы очень рады данному еву.
+              </p>
+            </article>
+            <article class="projects__item">
+              <div class="projects__image-wrapper">
+                <img 
+                  src="./images/projects-img.png" 
+                  alt="Спортивный комплекс Олимпийский - многофункциональная арена" 
+                  class="projects__image"
+                  loading="lazy"
+                  >
+                <div class="projects__decorative"></div>
+              </div>
+              <h3 class="projects__title">Газпром Арена</h3>
+              <p class="projects__text">
+                Мы сделали самую красивую арену в Европе. Это открытие стало для нас прорывной точкой для разивтия на следующие десятилетия. Мы очень рады данному еву.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- Realization section -->
+      <section class="realization">
+        <div class="realization__container container">
+          <div class="realization__content">
+            <h2 class="realization__title">САМЫЕ УМНЫЕ ПРОЕКТЫ</h2>
+            <p class="realization__text">РЕАЛИЗУЕМ САМЫЕ СМЕЛЫЕ РЕШЕНИЯ В РОССИИ!</p>
+          </div>
+          <button class="realization__button" type="button" aria-label="Отправить запрос на сотрудничество">
+            <div class="realization__button-inner">
+              <svg width="18" height="15" fill="none">
+                <use xlink:href="#icon-email"></use>
+              </svg>
+              <span class="realization__button-text">ВАШ ЗАПРОС</span>
+            </div>
+          </button>
+        </div>
+      </section>
+      <!-- Activity section -->
+      <section class="activity" aria-labelledby="activity-title">
+        <div class="activity__container container">
+          <header class="activity__header">
+            <h2 id="activity-title" class="activity__main-title">ЧЕМ МЫ ЗАНИМАЕМСЯ?</h2>
+          </header>
+          <ul class="activity__list">
+            <li class="activity__item">
+              <div class="activity__box">
+                <div class="activity__box-image" aria-hidden="true">
+                  <svg width="60" height="48">
+                    <use xlink:href="#icon-building"></use>
+                  </svg>
+                </div>
+                <div class="activity__text">
+                  <p class="activity__description">СТРОИТЕЛЬСТВО ОФИСНЫХ ЗДАНИЙ</p>
+                </div>
+              </div>
+            </li>
+            <li class="activity__item">
+              <div class="activity__box">
+                <div class="activity__box-image" aria-hidden="true">
+                  <svg width="60" height="48">
+                    <use xlink:href="#icon-building"></use>
+                  </svg>
+                </div>
+                <div class="activity__text">
+                  <p class="activity__description">СТРОИТЕЛЬСТВО ОФИСНЫХ ЗДАНИЙ</p>
+                </div>
+              </div>
+            </li>
+            <li class="activity__item">
+              <div class="activity__box">
+                <div class="activity__box-image" aria-hidden="true">
+                  <svg width="60" height="48">
+                    <use xlink:href="#icon-building"></use>
+                  </svg>
+                </div>
+                <div class="activity__text">
+                  <p class="activity__description">СТРОИТЕЛЬСТВО ОФИСНЫХ ЗДАНИЙ</p>
+                </div>
+              </div>
+            </li>
+            <li class="activity__item">
+              <div class="activity__box">
+                <div class="activity__box-image" aria-hidden="true">
+                  <svg width="60" height="48">
+                    <use xlink:href="#icon-building"></use>
+                  </svg>
+                </div>
+                <div class="activity__text">
+                  <p class="activity__description">СТРОИТЕЛЬСТВО ОФИСНЫХ ЗДАНИЙ</p>
+                </div>
+              </div>
+            </li>
+            <li class="activity__item">
+              <div class="activity__box">
+                <div class="activity__box-image" aria-hidden="true">
+                  <svg width="60" height="48">
+                    <use xlink:href="#icon-building"></use>
+                  </svg>
+                </div>
+                <div class="activity__text">
+                  <p class="activity__description">СТРОИТЕЛЬСТВО ОФИСНЫХ ЗДАНИЙ</p>
+                </div>
+              </div>
+            </li>
+            <li class="activity__item">
+              <div class="activity__box">
+                <div class="activity__box-image" aria-hidden="true">
+                  <svg width="60" height="48">
+                    <use xlink:href="#icon-building"></use>
+                  </svg>
+                </div>
+                <div class="activity__text">
+                  <p class="activity__description">СТРОИТЕЛЬСТВО ОФИСНЫХ ЗДАНИЙ</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Gallery section -->
+      <section class="gallery" aria-label="Галерея выполненных проектов">
+        <div class="gallery__container container">
+          <div class="gallery__items">
+            <div class="gallery__item">
+              <img src="./images/gallery-img.png" alt="Строительство газопровода в северном регионе" class="gallery__image" loading="lazy">
+            </div>
+            <div class="gallery__item">
+              <img src="./images/gallery-img.png" alt="Мост через крупную реку в процессе строительства" class="gallery__image" loading="lazy">
+            </div>
+            <div class="gallery__item">
+              <img src="./images/gallery-img.png" alt="Современный стадион с уникальной кровлей" class="gallery__image" loading="lazy">
+            </div>
+            <div class="gallery__item">
+              <img src="./images/gallery-img.png" alt="Производственный цех с современным оборудованием" class="gallery__image" loading="lazy">
+            </div>
+            <div class="gallery__item">
+              <img src="./images/gallery-img.png" alt="Гидротехническое сооружение - дамба" class="gallery__image" loading="lazy">
+            </div>
+            <div class="gallery__item">
+              <img src="./images/gallery-img.png" alt="Офисное здание бизнес-класса" class="gallery__image" loading="lazy">
+            </div>
+            <div class="gallery__item">
+              <img src="./images/gallery-img.png" alt="Инфраструктурный проект - автомобильная развязка" class="gallery__image" loading="lazy">
+            </div>
+            <div class="gallery__item">
+              <img src="./images/gallery-img.png" alt="Спортивный комплекс для зимних видов спорта" class="gallery__image" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Questions/Answers section -->
+      <section class="questions-answers">
+        <div class="questions-answers__container container">
+          <header class="questions-answers__header">
+            <h2 class="questions-answers__title">ОТВЕТЫ НА ВОПРОСЫ</h2>
+          </header>
+          <div class="questions-answers__list">
+            <!-- Questions-answers 1 -->
+            <div class="questions-answers__item">
+              <input type="checkbox" id="question1" class="questions-answers__checkbox">
+              <label for="question1" class="questions-answers__header-wrapper">
+                <svg class="questions-answers__icon" width="13" height="12">
+                  <use xlink:href="#icon-arrow"></use>
+                </svg>
+                <span class="questions-answers__question">РАБОТАЕТЕ ЛИ ВЫ ПО 249 ФЗ?</span>
+              </label>
+              <div class="questions-answers__content">
+                <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. </p>
+              </div>
+            </div>
+            <!-- Questions-answers 2 -->
+            <div class="questions-answers__item">
+              <input type="checkbox" id="question2" class="questions-answers__checkbox">
+              <label for="question2" class="questions-answers__header-wrapper">
+                <svg class="questions-answers__icon" width="13" height="12">
+                  <use xlink:href="#icon-arrow"></use>
+                </svg>
+                <span class="questions-answers__question">РАБОТАЕТЕ ЛИ ВЫ ПО 249 ФЗ?</span>
+              </label>
+              <div class="questions-answers__content">
+                <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. </p>
+              </div>
+            </div>
+            <!-- Questions-answers 3 -->
+            <div class="questions-answers__item">
+              <input type="checkbox" id="question3" class="questions-answers__checkbox">
+              <label for="question3" class="questions-answers__header-wrapper">
+                <svg class="questions-answers__icon" width="13" height="12">
+                  <use xlink:href="#icon-arrow"></use>
+                </svg>
+                <span class="questions-answers__question">РАБОТАЕТЕ ЛИ ВЫ ПО 249 ФЗ?</span>
+              </label>
+              <div class="questions-answers__content">
+                <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. </p>
+              </div>
+            </div>
+            <!-- Questions-answers 4 -->
+            <div class="questions-answers__item">
+              <input type="checkbox" id="question4" class="questions-answers__checkbox">
+              <label for="question4" class="questions-answers__header-wrapper">
+                <svg class="questions-answers__icon" width="13" height="12">
+                  <use xlink:href="#icon-arrow"></use>
+                </svg>
+                <span class="questions-answers__question">РАБОТАЕТЕ ЛИ ВЫ ПО 249 ФЗ?</span>
+              </label>
+              <div class="questions-answers__content">
+                <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Partners section -->
+      <section class="partners" aria-labelledby="partners-heading">
+        <div class="partners__container container">
+          <div class="partners__inner">
+            <header class="partners__header">
+              <h2 class="partners__title" id="partners-heading">НАШИ ПАРТНЕРЫ</h2>
+            </header>
+            <ul class="partners__list">
+              <li class="partners__item">
+                <img src="./images/partners-img.png" alt="Логотип компании Газпром" class="partners__image">
+              </li>
+              <li class="partners__item">
+                <img src="./images/partners-img.png" alt="Логотип компании ЛУКОЙЛ" class="partners__image">
+              </li>
+              <li class="partners__item">
+                <img src="./images/partners-img.png" alt="Логотип компании Роснефть" class="partners__image">
+              </li>
+              <li class="partners__item">
+                <img src="./images/partners-img.png" alt="Логотип компании Сбербанк" class="partners__image">
+              </li>
+              <li class="partners__item">
+                <img src="./images/partners-img.png" alt="Логотип компании РЖД" class="partners__image">
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- Reviews section -->
+      <section class="reviews">
+        <div class="reviews__container container">
+          <header class="reviews__header">
+            <h2 class="reviews__title">ОТЗЫВЫ О РАБОТЕ С НАМИ</h2>
+          </header>
+          <ul class="reviews__list">
+            <!-- Reviews 1 -->
+            <li class="reviews__item">
+              <figure class="reviews__figure">
+                <svg class="reviews__decorative" width="34" height="28" aria-hidden="true">
+                  <use xlink:href="#icon-quote"></use>
+                </svg>
+                <figcaption class="reviews__text-wrapper">
+                  <blockquote class="reviews__text">
+                    <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов.</p>
+                  </blockquote>
+                </figcaption>
+              </figure>
+              <div class="reviews__author">
+                <cite class="reviews__name">Иванов Иван, <span class="reviews__author-color">ООО "Газпром-Арена"</span></cite>
+              </div>
+            </li>
+            <!-- Reviews 2 -->
+            <li class="reviews__item">
+              <figure class="reviews__figure">
+                <svg class="reviews__decorative" width="34" height="28" aria-hidden="true">
+                  <use xlink:href="#icon-quote"></use>
+                </svg>
+                <figcaption class="reviews__text-wrapper">
+                  <blockquote class="reviews__text">
+                    <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов.</p>
+                  </blockquote>
+                </figcaption>
+              </figure>
+              <div class="reviews__author">
+                <cite class="reviews__name">Иванов Иван, <span class="reviews__author-color">ООО "Газпром-Арена"</span></cite>
+              </div>
+            </li>
+            <!-- Reviews 3 -->
+            <li class="reviews__item">
+              <figure class="reviews__figure">
+                <svg class="reviews__decorative" width="34" height="28" aria-hidden="true">
+                  <use xlink:href="#icon-quote"></use>
+                </svg>
+                <figcaption class="reviews__text-wrapper">
+                  <blockquote class="reviews__text">
+                    <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов.</p>
+                  </blockquote>
+                </figcaption>
+              </figure>
+              <div class="reviews__author">
+                <cite class="reviews__name">Иванов Иван, <span class="reviews__author-color">ООО "Газпром-Арена"</span></cite>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Work section -->
+      <section class="work">
+        <div class="work__container container">
+          <div class="work__content">
+            <h2 class="work__title">ХОТИТЕ С НАМИ РАБОТАТЬ?</h2>
+            <p class="work__text">ОСТАВЬТЕ ЗАЯВКУ И МЫ СВЯЖЕМСЯ С ВАМИ!</p>
+          </div>
+          <button class="work__button" type="button" aria-label="Оставить заявку на сотрудничество">
+            <div class="work__button-inner">
+              <svg width="18" height="15">
+                <use xlink:href="#icon-email"></use>
+              </svg>
+              <span class="work__button-text">ВАШ ЗАПРОС</span>
+            </div>
+          </button>
+        </div>
+      </section>
+      <!-- Contacts section -->
+      <section class="contacts">
+        <div class="contacts__container container">
+          <header class="contacts__header">
+            <h2 class="contacts__title" id="contacts-heading">КОНТАКТЫ</h2>
+          </header>
+          <div class="contacts__content">
+            <!-- Contact 1: Address -->
+            <div class="contacts__info">
+              <svg class="contacts__icon" width="37" height="50" aria-hidden="true">
+                <use xlink:href="#icon-location"></use>
+              </svg>
+              <div class="contacts__details">
+                <p class="contacts__label">АДРЕС:</p>
+                <address class="contacts__value">
+                  НЕВСКИЙ ПРОСПЕКТ 140,<br>
+                  ОФИС 140-142
+                </address>
+              </div>
+            </div>
+            <!-- Contact 2: Phone number -->
+            <div class="contacts__info">
+              <svg class="contacts__icon" width="49" height="50" aria-hidden="true">
+                <use xlink:href="#icon-phone"></use>
+              </svg>
+              <div class="contacts__details">
+                <p class="contacts__label">ТЕЛЕФОН:</p>
+                <div class="contacts__value">
+                  <a href="tel:88121112233" class="contacts__link">8 (812) 111-22-33</a><br>
+                  <a href="tel:88121112234" class="contacts__link">8 (812) 111-22-34</a>
+                </div>
+              </div>
+            </div>
+            <!-- Contact 3: Business hours -->
+            <div class="contacts__info">
+              <svg class="contacts__icon" width="47" height="48" aria-hidden="true">
+                <use xlink:href="#icon-time"></use>
+              </svg>
+              <div class="contacts__details">
+                <p class="contacts__label">ВРЕМЯ РАБОТЫ:</p>
+                <p class="contacts__value">
+                  ПН-СБ<br>
+                  10:00 - 20:00
+                </p>
+              </div>
+            </div>
+            <!-- Contact 4: Email -->
+            <div class="contacts__info">
+              <svg class="contacts__icon" width="49" height="36" aria-hidden="true">
+                <use xlink:href="#icon-envelope"></use>
+              </svg>
+              <div class="contacts__details">
+                <p class="contacts__label">E-MAIL:</p>
+                <a href="mailto:INFO@VIP.RU" class="contacts__value contacts__link">INFO@VIP.RU</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer section -->
+    <footer class="footer">
+      <div class="footer__container container">
+        <p class="footer__copyright">© 2019 Строительная компания</p>
+        <p class="footer__developer">
+          <a href="https://www.figma.com/design/IYDS7hGKQf9kjlKEgSJGAM/%D0%BA%D1%80%D1%83%D0%BF%D0%BD%D0%B5%D0%B9%D1%88%D0%B8%D0%B5-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B--?m=auto&t=DlhUgSKXyhO2wTFz-6">Разработано лучшей студией</a>
+        </p>
+      </div>
+    </footer>
+    <script src="./javascript/theme.js"></script>
+  </body>
+</html>

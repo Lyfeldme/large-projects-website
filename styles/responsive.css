@@ -1,0 +1,217 @@
+@media (min-width: 1200px) {
+  .header__nav-container {
+    position: relative;
+  }
+  
+  .header__mobile-menu {
+    top: calc(100% + 20px);
+    right: 20px;
+    left: auto;
+    width: 350px;
+    border-radius: 8px;
+    transform: none;
+  }
+  
+  .header__mobile-menu-link {
+    padding: 16px 30px;
+    font-size: 18px;
+    text-align: left;
+  }
+  
+  .header__mobile-menu-link:hover {
+    padding-left: 35px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .header__mobile-menu {
+    right: calc((100% - 1150px) / 2);
+  }
+}
+
+@media (min-width: 2000px) {
+  .header__mobile-menu {
+    right: calc((100% - 1150px) / 2);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .header__mobile-menu {
+    top: calc(100% + 15px);
+    right: 20px;
+    left: auto;
+    width: 320px;
+    border-radius: 8px;
+    transform: none;
+  }
+  
+  .header__mobile-menu-link {
+    padding: 14px 25px;
+    font-size: 17px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 1200px) {
+  .reviews__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .questions-answers__content p {
+    text-align: justify;
+  }
+
+  .reviews__text {
+    text-align: justify;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .header__mobile-menu {
+    top: calc(100% + 15px);
+    right: 20px;
+    left: auto;
+    width: 380px;
+    border-radius: 8px;
+    transform: none;
+  }
+  
+  .header__mobile-menu-link {
+    padding: 15px 25px;
+    font-size: 17px;
+    text-align: left;
+  }
+  
+  .questions-answers__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header__mobile-menu {
+    top: calc(100% + 10px);
+    right: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+    border-radius: 6px;
+    transform: none;
+  }
+  
+  .header__mobile-menu-link {
+    padding: 14px 20px;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .header__mobile-menu-link:hover {
+    padding-left: 20px;
+    background-color: rgba(247, 101, 74, 0.05);
+  }
+  
+  .questions-answers__container {
+    max-width: 600px;
+  }
+
+  .reviews__list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .partners__list {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+  }
+
+  .partners__image {
+    width: 80%;
+  }
+
+  .footer__container.container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__title {
+    font-size: 24px;
+  }
+  
+  .header__description {
+    font-size: 14px;
+  }
+
+  /* .footer__container.container {
+    justify-content: center;
+  } */
+}
+
+@media (max-width: 400px) {
+  .realization__container.container,
+  .work__container.container {
+    flex-direction: column;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 380px) {
+  .header__mobile-menu-link {
+    padding: 12px 15px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 320px) {
+  .advantages__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  .projects__text {
+    text-align: justify;
+  }
+
+  .questions-answers__content p {
+    text-align: justify;
+  }
+
+  .reviews__figure {
+    width: 280px;
+    height: 260px;
+  }
+
+  .reviews__text {
+    text-align: justify;
+  }
+
+  .contacts__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .contacts__icon {
+    width: 20%;
+  }
+
+  .contacts__info {
+    width: 132px;
+  }
+
+  .footer__container.container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
