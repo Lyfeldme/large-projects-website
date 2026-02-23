@@ -113,6 +113,12 @@
     padding-left: 20px;
     background-color: rgba(247, 101, 74, 0.05);
   }
+
+  .advantages__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
   
   .questions-answers__container {
     max-width: 600px;
@@ -125,6 +131,10 @@
 }
 
 @media (max-width: 576px) {
+  .realization__container.container {
+    flex-direction: column;
+  }
+
   .partners__list {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -133,6 +143,26 @@
 
   .partners__image {
     width: 80%;
+  }
+
+  .work__container.container {
+    flex-direction: column;
+  }
+
+  .contacts__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contacts__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    width: auto;
+    max-width: 255px;
+    height: auto;
+    min-height: 194px;
   }
 
   .footer__container.container {
@@ -163,12 +193,21 @@
     flex-direction: column;
     white-space: nowrap;
   }
+
+  .advantages__container.container {
+    padding: 20px;
+  }
 }
 
 @media (max-width: 380px) {
   .header__mobile-menu-link {
     padding: 12px 15px;
     font-size: 15px;
+  }
+
+  .reviews__figure {
+    width: 280px;
+    height: 260px;
   }
 }
 
@@ -186,10 +225,10 @@
     text-align: justify;
   }
 
-  .reviews__figure {
+  /* .reviews__figure {
     width: 280px;
     height: 260px;
-  }
+  } */
 
   .reviews__text {
     text-align: justify;

@@ -70,7 +70,7 @@ ul, ol {
   white-space: normal;
 }
 
-/* Скрываем чекбокс */
+/* Hide checkbox */
 .header__menu-checkbox {
   position: absolute;
   width: 1px;
@@ -82,9 +82,8 @@ ul, ol {
   clip: rect(0 0 0 0);
 }
 
-/* ===== КРАСИВОЕ МЕНЮ ===== */
 
-/* Анимация бургера при открытии */
+/* Animation open */
 .header__menu-checkbox:checked ~ .header__menu-toggle span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
@@ -98,7 +97,7 @@ ul, ol {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Выезжающее меню - базовые стили */
+/* Basic menu style mobile */
 .header__mobile-menu {
   position: absolute;
   top: calc(100% + 15px);
@@ -108,7 +107,7 @@ ul, ol {
   width: 100%;
   max-width: 1150px;
   
-  /* Анимация */
+  /* Animation */
   max-height: 0;
   border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
@@ -119,14 +118,14 @@ ul, ol {
   transform: translateX(-50%);
 }
 
-/* Открытое состояние */
+/* Open */
 .header__menu-checkbox:checked ~ .header__mobile-menu {
   visibility: visible;
   max-height: 400px;
   opacity: 1;
 }
 
-/* Затемнение фона при открытом меню */
+/* Shadow fon */
 .header__menu-checkbox:checked ~ .header__mobile-menu::before {
   content: '';
   position: fixed;
@@ -140,14 +139,14 @@ ul, ol {
   pointer-events: none;
 }
 
-/* Список меню */
+/* List menu */
 .header__mobile-menu-list {
   margin: 0;
   padding: 8px 0;
   list-style: none;
 }
 
-/* Элементы меню */
+/* Element menu */
 .header__mobile-menu-item {
   border-bottom: 1px solid var(--border-color);
 }
@@ -156,7 +155,7 @@ ul, ol {
   border-bottom: none;
 }
 
-/* Ссылки меню */
+/* Link menu */
 .header__mobile-menu-link {
   position: relative;
   display: block;
@@ -171,21 +170,20 @@ ul, ol {
   transition: all 0.3s ease;
 }
 
-/* Эффект при наведении */
+/* effect hover */
 .header__mobile-menu-link:hover {
   padding-left: 35px;
   color: var(--accent);
   background-color: rgba(247, 101, 74, 0.05);
 }
 
-/* Активный пункт меню */
 .header__mobile-menu-link.active {
   border-left: 3px solid var(--accent);
   color: var(--accent);
   background-color: rgba(247, 101, 74, 0.03);
 }
 
-/* Анимация затемнения */
+/* Animation fon */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -195,7 +193,7 @@ ul, ol {
   }
 }
 
-/* Анимация появления пунктов меню */
+/* Animation open menu */
 @keyframes slideIn {
   from {
     opacity: 0;
@@ -218,8 +216,6 @@ ul, ol {
 .header__menu-checkbox:checked ~ .header__mobile-menu .header__mobile-menu-item:nth-child(4) { animation-delay: 0.25s; }
 .header__menu-checkbox:checked ~ .header__mobile-menu .header__mobile-menu-item:nth-child(5) { animation-delay: 0.3s; }
 
-/* ===== ОСНОВНЫЕ СТИЛИ ===== */
-
 .header__nav-container {
   display: flex;
   justify-content: space-between;
@@ -230,7 +226,7 @@ ul, ol {
   padding: 0 20px;
 }
 
-/* Контейнер для контента */
+/* Content container */
 .header__content-container {
   width: 100%;
   max-width: 744px;
@@ -247,7 +243,7 @@ ul, ol {
   overflow: hidden;
 }
 
-/* Фоновое изображение */
+/* Background image */
 .header::before {
   content: '';
   position: absolute;
@@ -263,7 +259,7 @@ ul, ol {
   background-size: cover;
 }
 
-/* Оверлей хедера */
+/* Overlay */
 .header::after {
   content: '';
   position: absolute;
@@ -276,14 +272,14 @@ ul, ol {
   pointer-events: none;
 }
 
-/* Навигация */
+/* Navigation */
 .header__nav {
   position: relative;
   z-index: 101;
   padding: 21px 0;
 }
 
-/* Логотип */
+/* Logo */
 .header__logo-link {
   display: inline-block;
   text-decoration: none;
@@ -301,7 +297,7 @@ ul, ol {
   transform: scale(1.05);
 }
 
-/* Кнопка меню */
+/* Header menu */
 .header__menu-toggle {
   display: flex;
   flex-direction: column;
@@ -331,7 +327,6 @@ ul, ol {
   transition: all 0.3s ease;
 }
 
-/* Контент по центру */
 .header__content {
   position: absolute;
   top: calc(50% - 62px);
@@ -344,7 +339,6 @@ ul, ol {
   transform: translateY(-50%);
 }
 
-/* Заголовок */
 .header__title {
   margin-bottom: 0;
   padding-bottom: 18px;
@@ -428,6 +422,7 @@ ul, ol {
   font-size: clamp(1rem, 0.975rem + 0.125vw, 1.125rem);
   font-style: normal;
   text-align: center;
+  white-space: nowrap;
 }
 
 .projects {
@@ -562,6 +557,7 @@ ul, ol {
   font-weight: 500;
   font-size: clamp(0.75rem, 0.725rem + 0.125vw, 0.875rem);
   letter-spacing: 0.05em;
+  white-space: nowrap;
 }
 
 .realization__button-inner {
@@ -594,7 +590,6 @@ ul, ol {
 .activity__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  justify-items: center;
   gap: 30px 28px;
   width: 100%;
   max-width: 1110px;
@@ -603,13 +598,21 @@ ul, ol {
   list-style: none;
 }
 
+.activity__item {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .activity__box {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  box-sizing: border-box;
+  width: 100%;
   max-width: 350px;
-  min-height: 250px;
+  height: 250px;
   padding: 51px;
   background-color: var(--bg-secondary);
 }
@@ -647,7 +650,7 @@ ul, ol {
   object-fit: cover;
 }
 
-/* Секция "Вопросы и ответы" */
+/* Section questions-answers */
 .questions-answers {
   padding: 0 20px;
   background: var(--bg-primary);
@@ -681,7 +684,7 @@ ul, ol {
   max-width: 730px;
 }
 
-.questions-answers__checkbox {
+.questions-answers__radio {
   display: none;
 }
 
@@ -729,12 +732,12 @@ ul, ol {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.questions-answers__checkbox:checked ~ .questions-answers__content {
+.questions-answers__radio:checked ~ .questions-answers__content {
   max-height: 200px;
   opacity: 1;
 }
 
-.questions-answers__checkbox:checked ~ .questions-answers__header-wrapper .questions-answers__icon {
+.questions-answers__radio:checked ~ .questions-answers__header-wrapper .questions-answers__icon {
   transform: rotate(0deg);
 }
 
@@ -897,6 +900,7 @@ ul, ol {
   font-weight: 500;
   font-size: clamp(0.75rem, 0.725rem + 0.125vw, 0.875rem);
   letter-spacing: 0.05em;
+  white-space: nowrap;
 }
 
 .work__button-inner {
@@ -964,6 +968,7 @@ ul, ol {
   font-size: clamp(0.75rem, 0.6rem + 0.75vw, 1.5rem);
   font-style: normal;
   text-align: center;
+  white-space: nowrap;
 }
 
 .contacts__link {
